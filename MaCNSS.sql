@@ -120,4 +120,5 @@ ALTER TABLE `patient`
     ADD `prixRetraite` FLOAT NOT NULL AFTER `statusRetraite`, 
     ADD `matriculeSociete` VARCHAR(255) NOT NULL AFTER `prixRetraite`,
     ADD `totaleJourTravail` INT NOT NULL AFTER `matriculeSociete`,
-    ADD  CONSTRAINT `matreculeSociete` FOREIGN KEY (`matriculeSociete`) REFERENCES `societe`(`matrecule`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD  CONSTRAINT `matreculeSociete` FOREIGN KEY (`matriculeSociete`) REFERENCES `societe`(`matrecule`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD `date_naissance` DATE NOT NULL AFTER `totaleJourTravail`;
